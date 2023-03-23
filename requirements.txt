@@ -1,0 +1,5 @@
+black
+ruff
+cookiecutter
+watchdog
+cruft

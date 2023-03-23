@@ -1,0 +1,14 @@
+{
+	"full_name": "Project name",
+	"project_name": "{{ cookiecutter.full_name.lower().replace(' ', '-').replace('_', '-') }}",
+	"project_git_repo": "git+ssh://git@github.com:company/{{ cookiecutter.project_name }}.git",
+	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+	"homepage": "{{ cookiecutter.project_git_repo }}",
+	"namespace": "{{ namespace }}",
+	"author_name": "{{ git['user.name'] }}",
+	"author_email":  "{{ git['user.email'] }}",
+	"description": "Project description",
+	"pre_commit": "y",
+	"_extensions": ["extensions.GitInfo"],
+	"version": "0.0.1"
+}

@@ -1,0 +1,5 @@
+[tool]
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "{{ cookiecutter.version }}"
+tag_format = "v$version"

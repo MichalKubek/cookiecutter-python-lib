@@ -41,9 +41,13 @@ lint/fix: ## automatic code fix
 lint: ## fast check of lint
 	@poetry run ruff {{cookiecutter.namespace}}/{{cookiecutter.project_slug}} tests/
 
-init: ## init development eviroment
+init: install/precommit ## init development eviroment
 	@pip install -U poetry tox
 	@poetry install
+ 
+install/precommit: ## install commitizef ro checking commits
+	@pip install -U commitizen pre-commit
+	@pre-commit install --hook-type commit-msg --hook-type pre-push
 
 build: ## build package
 	@poetry build
